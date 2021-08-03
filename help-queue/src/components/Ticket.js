@@ -1,16 +1,20 @@
 import React from 'react';
+import PropTypes from "prop-types"; // upper camel case 
 
-function Ticket() {
-  const name = "Thato";
-  const name2 = "Haley";
+function Ticket(props) {
   return (
     <React.Fragment>
-      <h3>Dabadoo</h3>
-      <h3>{name} and {name2}</h3>
-      <p><em>Firebase entries not saving!</em></p>
+      <h3>{props.location} - {props.names}</h3>
+      <p><em>{props.issue}</em></p>
       <hr/>
     </React.Fragment>
   );
 }
+
+Ticket.propTypes = { // lower camel case because its a property here
+  names: PropTypes.string.isRequired, // upper camel case because its reffering to the library
+  location: PropTypes.string.isRequired,
+  issue: PropTypes.string
+};
 
 export default Ticket; 
