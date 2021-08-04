@@ -5,7 +5,7 @@ function Header() {
   return (
     <React.Fragment>
       <h1>Help Queue</h1> 
-      <img src={ticketImage} alt="an image of tickets" />
+      <img src={ticketImage} alt="of tickets" />
     </React.Fragment>
     );
 }

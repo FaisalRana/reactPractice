@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./Header";
 // import Ticket from "./Ticket";
-import TicketList from "./TicketList.js";
+import TicketControl from "./TicketControl.js";
 
 function App(){
   return (
     <React.Fragment>
       <Header />
-      <TicketList />
+      <TicketControl />
     </React.Fragment>
   );
 }
