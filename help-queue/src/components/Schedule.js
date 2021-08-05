@@ -45,10 +45,10 @@ function Schedule(){
     <React.Fragment>
       <hr/>
       {Schedule.map((daySchedule, index) =>
-        <Ticket day={daySchedule.names}
+        <Ticket day={daySchedule.day}
           location={daySchedule.location}
-          hours={daySchedule.issue}
-          booth={daySchedule.b}
+          hours={daySchedule.hours}
+          booth={daySchedule.booth}
           key={index}/>
       )}
     </React.Fragment>

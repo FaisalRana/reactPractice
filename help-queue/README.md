@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+farmers market ideas:
+
+customer story- 
+Since Avery's is at a different market almost every day, they've started a website to show customers which market they will be at on a given day.
+
+Avery's also grows different crops in different seasons. They'd like to display what produce is available during which months on their site too.
