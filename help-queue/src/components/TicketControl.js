@@ -6,7 +6,8 @@ class TicketControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
+      masterTicketList: []
     };
     // this.handleClick = this.handleClick.bind(this);
     console.log(this);
@@ -24,6 +25,10 @@ class TicketControl extends React.Component {
     }
   }
 
+  handleAddingNewTicketToList = (newTicket) => {
+    const newMasterTicketList = this.state.masterTicketList.concat(newTicket);
+    this.setState({masterTicketList: newMasterTicketList});
+  }
 
   render(){
     let currentlyVisibleState = null;
@@ -39,10 +44,10 @@ class TicketControl extends React.Component {
       currentlyVisibleState = "Have you spent 15 minutes going through through the problem documenting every step?"
       buttonText = "Yes";
     } else if (this.state.counter === 3) {
-      currentlyVisibleState = <NewTicketForm />
+      currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList} />
       buttonText = "Return to Ticket List";
     } else {
-      currentlyVisibleState = <TicketList />
+      currentlyVisibleState = <TicketList ticketList={this.state.masterTicketList} />
       buttonText = "Add Ticket";
     }
 
