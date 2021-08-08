@@ -6,7 +6,6 @@ class TicketControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false,
       counter: 0
     };
     // this.handleClick = this.handleClick.bind(this);
@@ -16,12 +15,10 @@ class TicketControl extends React.Component {
   handleClick = () => {
     if (this.state.counter !== 4) {
       this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage,
         counter: prevState.counter += 1,
       }));
     } else {
       this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage,
         counter: prevState.counter -= 1,
       }));
     }
