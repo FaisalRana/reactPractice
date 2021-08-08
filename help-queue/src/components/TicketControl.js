@@ -14,11 +14,17 @@ class TicketControl extends React.Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({
+    if (this.state.counter !== 4) {
+      this.setState(prevState => ({
         formVisibleOnPage: !prevState.formVisibleOnPage,
         counter: prevState.counter += 1,
       }));
-      console.log(this);
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+        counter: prevState.counter -= 1,
+      }));
+    }
   }
 
 
@@ -41,7 +47,6 @@ class TicketControl extends React.Component {
     } else {
       currentlyVisibleState = <TicketList />
       buttonText = "Add Ticket";
-      this.state.counter -= 2;
     }
 
     return (
